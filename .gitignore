@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# Laravel
+/laravel/vendor
+/laravel/node_modules
+/laravel/.env
+/laravel/.env.backup
+/laravel/.env.production
+/laravel/.phpunit.cache
+/laravel/database/database.sqlite
+/laravel/storage/*.key
+/laravel/storage/pail
+/laravel/storage/logs/*.log
+/laravel/storage/framework/cache/data/*
+/laravel/storage/framework/sessions/*
+/laravel/storage/framework/views/*
+/laravel/storage/framework/testing/*
+!/laravel/storage/framework/cache/data/.gitkeep
+!/laravel/storage/framework/sessions/.gitkeep
+!/laravel/storage/framework/views/.gitkeep
+!/laravel/storage/framework/testing/.gitkeep
+!/laravel/storage/logs/.gitkeep
+/laravel/bootstrap/cache/*.php
+/laravel/public/hot
+/laravel/public/storage
+/laravel/auth.json

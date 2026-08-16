@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhishek Mondal · Portfolio</title>
+  <meta name="description" content="Abhishek Mondal — Software Developer. Git-themed personal portfolio." />
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- boxicons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><text y=%2220%22 font-size=%2222%22>🌿</text></svg>">
+</head>
+<body>
+
+  <main>
+
+    <!-- ASIDE / SIDEBAR -->
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Abhishek Mondal" width="120">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Abhishek Mondal">Abhishek Mondal</h1>
+          <p class="title">
+            <span class="prompt">$</span> whoami <span class="cursor">_</span>
+          </p>
+          <p class="git-title">git config user.role <span class="value">"Software Developer"</span></p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>View Contact</span>
+          <ion-icon name="chevron-down" class="bx bx-chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+            <div class="icon-box"><i class='bx bx-envelope'></i></div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:offcabhishek@gmail.com" class="contact-link">offcabhishek@gmail.com</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box"><i class='bx bxl-whatsapp'></i></div>
+            <div class="contact-info">
+              <p class="contact-title">WhatsApp</p>
+              <a href="https://wa.me/917749028081" target="_blank" class="contact-link">+91 77490 28081</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box"><i class='bx bx-map'></i></div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Bhubaneswar, Odisha, India</address>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box"><i class='bx bx-git-branch'></i></div>
+            <div class="contact-info">
+              <p class="contact-title">Repositories</p>
+              <a href="https://github.com/Abhishek-e?tab=repositories" target="_blank" class="contact-link" data-repo-count>&hellip; public repos</a>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://github.com/Abhishek-e" target="_blank" class="social-link" aria-label="GitHub">
+              <i class='bx bxl-github'></i>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/errabhishek/" target="_blank" class="social-link" aria-label="LinkedIn">
+              <i class='bx bxl-linkedin'></i>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://wa.me/917749028081" target="_blank" class="social-link" aria-label="WhatsApp">
+              <i class='bx bxl-whatsapp'></i>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="mailto:offcabhishek@gmail.com" class="social-link" aria-label="Email">
+              <i class='bx bx-envelope'></i>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link>
+              <span class="branch-icon"><i class='bx bx-git-branch'></i></span>about
+            </button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>
+              <span class="branch-icon"><i class='bx bx-git-branch'></i></span>skills
+            </button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>
+              <span class="branch-icon"><i class='bx bx-git-branch'></i></span>projects
+            </button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>
+              <span class="branch-icon"><i class='bx bx-git-branch'></i></span>contact
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+
+      <!-- ABOUT -->
+      <article class="about active" data-page>
+
+        <header>
+          <h2 class="h2 article-title">About Me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Hi, I'm <strong>Abhishek Mondal</strong> — a software developer based in Bhubaneswar, Odisha, India,
+            who builds things the way I write commits: small, deliberate, and shipped often.
+            I work across the stack — Python/Flask backends, JavaScript front-ends, and the occasional
+            automation bot that saves someone an afternoon of copy-pasting.
+          </p>
+          <p>
+            My recent work spans learning management systems, CRM tools, resume/ATS tooling, scraping &amp;
+            data pipelines, and chatbots — most of it open-sourced on
+            <a href="https://github.com/Abhishek-e" target="_blank">GitHub</a>. I like projects with a clear
+            "before / after" — a manual process that becomes one command, a messy dataset that becomes a
+            clean dashboard.
+          </p>
+        </section>
+
+        <section class="resume-cta">
+          <button class="resume-btn" data-resume-open>
+            <i class='bx bx-file-blank'></i>
+            <span>Show Resume</span>
+          </button>
+        </section>
+
+        <!-- terminal-style commit log -->
+        <section class="commit-log">
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+              <span class="terminal-title">git log --oneline --graph</span>
+            </div>
+            <div class="terminal-body" data-commit-log>
+              <p class="terminal-loading"><span class="prompt">$</span> fetching recent commits from GitHub<span class="cursor">_</span></p>
+            </div>
+          </div>
+        </section>
+
+        <section class="service">
+          <h3 class="h3 service-title">What I'm Working On</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+              <div class="service-icon-box"><i class='bx bx-server'></i></div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Backend &amp; APIs</h4>
+                <p class="service-item-text">Building server-side apps and REST APIs with Python &amp; Flask, from LMS platforms to CRMs.</p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box"><i class='bx bx-code-alt'></i></div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web Development</h4>
+                <p class="service-item-text">Responsive front-ends and full websites with HTML, CSS &amp; JavaScript.</p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box"><i class='bx bx-bot'></i></div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Automation &amp; Bots</h4>
+                <p class="service-item-text">Chatbots, scrapers, and scripts that automate repetitive workflows.</p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box"><i class='bx bx-data'></i></div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Data Tools</h4>
+                <p class="service-item-text">Analyzers and dashboards (like DataLens) that turn raw data into insight.</p>
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+      <!-- SKILLS (git-stats themed) -->
+      <article class="skills" data-page>
+
+        <header>
+          <h2 class="h2 article-title">Skills</h2>
+        </header>
+
+        <p class="skills-intro">A rough breakdown of what shows up most across my repositories — like a
+          <code>git diff --stat</code> for my tech stack.</p>
+
+        <section class="skills-bar">
+          <div class="lang-bar">
+            <div class="lang-bar-python" style="width: 45%;" title="Python 45%"></div>
+            <div class="lang-bar-js" style="width: 20%;" title="JavaScript 20%"></div>
+            <div class="lang-bar-html" style="width: 25%;" title="HTML 25%"></div>
+            <div class="lang-bar-css" style="width: 10%;" title="CSS 10%"></div>
+          </div>
+          <ul class="lang-legend">
+            <li><span class="dot dot-python"></span>Python</li>
+            <li><span class="dot dot-js"></span>JavaScript</li>
+            <li><span class="dot dot-html"></span>HTML</li>
+            <li><span class="dot dot-css"></span>CSS</li>
+          </ul>
+        </section>
+
+        <h3 class="h3 skills-group-title">Web Development</h3>
+        <ul class="skills-list content-card">
+
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <p class="title"><i class='bx bxl-python'></i> Python / Flask</p>
+              <data value="85">85%</data>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 85%;"></div>
+            </div>
+          </li>
+
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <p class="title"><i class='bx bx-code-curly'></i> Laravel</p>
+              <data value="65">65%</data>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 65%;"></div>
+            </div>
+          </li>
+
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <p class="title"><i class='bx bx-code-alt'></i> CodeIgniter</p>
+              <data value="60">60%</data>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 60%;"></div>
+            </div>
+          </li>
+
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <p class="title"><i class='bx bxl-javascript'></i> JavaScript</p>
+              <data value="70">70%</data>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 70%;"></div>
+            </div>
+          </li>
+
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <p class="title"><i class='bx bxl-html5'></i> HTML &amp; CSS</p>
+              <data value="80">80%</data>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 80%;"></div>
+            </div>
+          </li>
+
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <p class="title"><i class='bx bx-data'></i> SQL / Databases</p>
+              <data value="75">75%</data>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 75%;"></div>
+            </div>
+          </li>
+
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <p class="title"><i class='bx bx-git-branch'></i> Git &amp; GitHub</p>
+              <data value="90">90%</data>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 90%;"></div>
+            </div>
+          </li>
+
+        </ul>
+
+        <h3 class="h3 skills-group-title">Cloud &amp; DevOps</h3>
+        <ul class="skills-list content-card">
+
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <p class="title"><i class='bx bxl-aws'></i> AWS EC2</p>
+              <data value="55">55%</data>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 55%;"></div>
+            </div>
+          </li>
+
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <p class="title"><i class='bx bxl-docker'></i> Docker</p>
+              <data value="60">60%</data>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 60%;"></div>
+            </div>
+          </li>
+
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <p class="title"><i class='bx bx-sitemap'></i> Microservices</p>
+              <data value="60">60%</data>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 60%;"></div>
+            </div>
+          </li>
+
+        </ul>
+
+        <h3 class="h3 skills-group-title">Data Analysis &amp; BI</h3>
+        <ul class="skills-list content-card">
+
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <p class="title"><i class='bx bx-table'></i> Excel</p>
+              <data value="80">80%</data>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 80%;"></div>
+            </div>
+          </li>
+
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <p class="title"><i class='bx bx-bar-chart-alt-2'></i> Power BI Dashboards</p>
+              <data value="70">70%</data>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 70%;"></div>
+            </div>
+          </li>
+
+        </ul>
+
+        <h3 class="h3 skills-group-title">Teaching</h3>
+        <ul class="skills-list content-card">
+
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <p class="title"><i class='bx bx-chalkboard'></i> Teaching &amp; Mentoring</p>
+              <data value="85">85%</data>
+            </div>
+            <div class="skill-progress-bg">
+              <div class="skill-progress-fill" style="width: 85%;"></div>
+            </div>
+          </li>
+
+        </ul>
+
+      </article>
+
+
+      <!-- PROJECTS -->
+      <article class="projects" data-page>
+
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+
+        <p class="projects-intro">Live from <a href="https://github.com/Abhishek-e" target="_blank">github.com/Abhishek-e</a> — <span data-repo-total>&hellip;</span> public repositories.</p>
+
+        <section class="filter-section">
+          <ul class="filter-list">
+            <li class="filter-item"><button class="active" data-filter-btn data-filter="all">All</button></li>
+            <li class="filter-item"><button data-filter-btn data-filter="python">Python</button></li>
+            <li class="filter-item"><button data-filter-btn data-filter="javascript">JavaScript</button></li>
+            <li class="filter-item"><button data-filter-btn data-filter="web">HTML / Web</button></li>
+          </ul>
+        </section>
+
+        <ul class="project-list" data-project-list>
+          <li class="project-loading"><span class="prompt">$</span> git clone --list-repos github.com/Abhishek-e<span class="cursor">_</span></li>
+        </ul>
+
+        <p class="more-projects">
+          <a href="https://github.com/Abhishek-e?tab=repositories" target="_blank">
+            <i class='bx bx-git-branch'></i> view all repositories on GitHub <i class='bx bx-right-arrow-alt'></i>
+          </a>
+        </p>
+
+      </article>
+
+
+      <!-- CONTACT -->
+      <article class="contact" data-page>
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox">
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+              <span class="terminal-title">contact.sh</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">$</span> echo $EMAIL</p>
+              <p class="output"><a href="mailto:offcabhishek@gmail.com">offcabhishek@gmail.com</a></p>
+              <p><span class="prompt">$</span> echo $WHATSAPP</p>
+              <p class="output"><a href="https://wa.me/917749028081" target="_blank">+91 77490 28081</a></p>
+              <p><span class="prompt">$</span> echo $LOCATION</p>
+              <p class="output">Bhubaneswar, Odisha, India</p>
+              <p><span class="prompt">$</span> <span class="cursor">_</span></p>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">git commit -m "let's talk"</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" data-form-btn>
+              <i class='bx bx-paper-plane'></i>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+  <!-- RESUME MODAL -->
+  <div class="resume-modal" data-resume-modal aria-hidden="true">
+    <div class="resume-modal-overlay" data-resume-close></div>
+    <div class="resume-modal-box">
+      <div class="resume-modal-header">
+        <span class="resume-modal-title"><i class='bx bx-file-blank'></i> resume.pdf</span>
+        <div class="resume-modal-actions">
+          <a class="resume-icon-btn" href="./assets/files/Abhishek_Mondal_Resume.pdf" download="Abhishek_Mondal_Resume.pdf" aria-label="Download resume" title="Download">
+            <i class='bx bx-download'></i>
+          </a>
+          <button class="resume-icon-btn" data-resume-close aria-label="Close resume" title="Close">
+            <i class='bx bx-x'></i>
+          </button>
+        </div>
+      </div>
+      <div class="resume-modal-body">
+        <div class="resume-doc">
+
+          <header class="resume-doc-header">
+            <h1>Abhishek Mondal</h1>
+            <p class="resume-doc-contact">
+              LinkedIn: <a href="https://www.linkedin.com/in/errabhishek/" target="_blank">linkedin.com/in/errabhishek</a>
+              &nbsp;&middot;&nbsp; Email: <a href="mailto:offcabhishek@gmail.com">offcabhishek@gmail.com</a><br>
+              GitHub: <a href="https://github.com/Abhishek-e" target="_blank">github.com/Abhishek-e</a>
+              &nbsp;&middot;&nbsp; Mobile: <a href="tel:+918480991221">+91 8480991221</a>
+            </p>
+          </header>
+
+          <section class="resume-doc-section">
+            <h2>Skills</h2>
+            <p><strong>Languages:</strong> Python, SQL, C/C++, PHP</p>
+            <p><strong>Libraries:</strong> Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn</p>
+            <p><strong>Tools/Platforms:</strong> Power BI, Excel, Jupyter Notebook, MS SQL Server, Laravel</p>
+            <p><strong>Soft Skills:</strong> Problem-Solving, Team Player, Project Management, Eager Learner</p>
+          </section>
+
+          <section class="resume-doc-section">
+            <h2>Professional Experience</h2>
+
+            <div class="resume-entry">
+              <div class="resume-entry-head">
+                <span class="resume-entry-title">Indian Institute of Management Ahmedabad &mdash; Research Associate</span>
+                <span class="resume-entry-date">Jun 2025</span>
+              </div>
+              <ul>
+                <li>Conducted statistical analysis and market research on economic and entrepreneurial trends.</li>
+                <li>Utilized Python, SQL and Excel to analyse large datasets and build predictive models.</li>
+                <li>Delivered insights that supported publication-quality research in data-driven projects.</li>
+              </ul>
+            </div>
+
+            <div class="resume-entry">
+              <div class="resume-entry-head">
+                <span class="resume-entry-title">Government Polytechnic, Malkangiri &mdash; Assistant Lecturer</span>
+                <span class="resume-entry-date">Apr 2024</span>
+              </div>
+              <ul>
+                <li>Taught Data Science and Programming fundamentals with practical implementation.</li>
+                <li>Guided students on applied analytics projects using Python, SQL, and Tableau.</li>
+                <li>Conducted academic and evaluation duties; active member of student development clubs.</li>
+              </ul>
+            </div>
+
+            <div class="resume-entry">
+              <div class="resume-entry-head">
+                <span class="resume-entry-title">Infosys &mdash; Software Development Executive</span>
+                <span class="resume-entry-date">Jun 2023</span>
+              </div>
+              <ul>
+                <li>Collaborated with teams to develop analytics-driven modules for client products.</li>
+                <li>Built SQL queries, dashboards, and KPIs to enhance decision-making.</li>
+                <li>Applied Python-based automation scripts to optimize reporting efficiency by 20%.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="resume-doc-section">
+            <h2>Projects</h2>
+
+            <div class="resume-entry">
+              <div class="resume-entry-head">
+                <span class="resume-entry-title">Industry Insights from Shark Tank India &mdash; DOI: 10.5281/ZENODO.17065193</span>
+                <span class="resume-entry-date">Jul 2025</span>
+              </div>
+              <ul>
+                <li>Performed exploratory data analysis using NumPy and Pandas, reducing data preprocessing time by 20%.</li>
+                <li>Analysed sector-wise startup investments using Python, SQL, and Excel.</li>
+                <li>Developed regression models to discover market insights.</li>
+              </ul>
+            </div>
+
+            <div class="resume-entry">
+              <div class="resume-entry-head">
+                <span class="resume-entry-title">School Management System &mdash; Illuminator Tech. / Freelance</span>
+                <span class="resume-entry-date">Aug 2022</span>
+              </div>
+              <ul>
+                <li>Designed normalized databases and ER diagrams.</li>
+                <li>Built MVC (Model, View, Controller) architecture with Laravel and MySQL.</li>
+                <li>Interlinked UI components to the view and controller layers in PHP.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="resume-doc-section">
+            <h2>Certificates</h2>
+            <ul class="resume-flat-list">
+              <li><span>Applied Data Science with Python &mdash; Coursera</span><span class="resume-entry-date">May 2020</span></li>
+              <li><span>Applied Social Network Analysis in Python &mdash; Coursera</span><span class="resume-entry-date">Apr 2020</span></li>
+              <li><span>Customer Analytics &mdash; Coursera</span><span class="resume-entry-date">Nov 2020</span></li>
+              <li><span>Introduction to Cybersecurity &mdash; Cisco</span><span class="resume-entry-date">Sep 2020</span></li>
+              <li><span>Advanced Java Programming &mdash; OCAC</span><span class="resume-entry-date">Mar 2020</span></li>
+            </ul>
+          </section>
+
+          <section class="resume-doc-section">
+            <h2>Education</h2>
+
+            <div class="resume-entry">
+              <div class="resume-entry-head">
+                <span class="resume-entry-title">Lovely Professional University, Phagwara, Punjab</span>
+                <span class="resume-entry-date">Aug 2025 &ndash; Present</span>
+              </div>
+              <p class="resume-entry-sub">Master of Technology &mdash; Data Science and Analytics; CGPA: 8.04</p>
+            </div>
+
+            <div class="resume-entry">
+              <div class="resume-entry-head">
+                <span class="resume-entry-title">Gandhi Engineering College, Bhubaneswar, Odisha</span>
+                <span class="resume-entry-date">Mar 2016 &ndash; Sep 2020</span>
+              </div>
+              <p class="resume-entry-sub">Bachelor of Technology &mdash; PCM; CGPA: 8.54</p>
+            </div>
+
+            <div class="resume-entry">
+              <div class="resume-entry-head">
+                <span class="resume-entry-title">Acharya Nagarjuna University, Andhra Pradesh</span>
+                <span class="resume-entry-date">Mar 2022 &ndash; May 2024</span>
+              </div>
+              <p class="resume-entry-sub">Bachelor of Education &mdash; Percentage: 91%</p>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Abhishek Mondal — built with <i class='bx bxs-heart'></i> and <code>git commit</code></p>
+  </footer>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
