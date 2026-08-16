@@ -267,3 +267,81 @@ async function loadRecentCommits() {
 loadProjects();
 loadRepoCount();
 loadRecentCommits();
+
+// ---------------------------------------------
+// Live Medium data: latest posts (Blog tab)
+// ---------------------------------------------
+const MEDIUM_USER = '@abhishek.mondal0202';
+const MEDIUM_CACHE_TTL = 10 * 60 * 1000; // 10 minutes
+
+function stripHtml(html) {
+  const tmp = document.createElement('div');
+  tmp.innerHTML = html || '';
+  tmp.querySelectorAll('figure, figcaption, style, script').forEach(el => el.remove());
+  tmp.querySelectorAll('p, br, div, li, h1, h2, h3, h4, h5, h6').forEach(el => el.append(' '));
+  return (tmp.textContent || tmp.innerText || '').replace(/\s+/g, ' ').trim();
+}
+
+function truncate(str, max) {
+  return str.length > max ? `${str.slice(0, max).trim()}…` : str;
+}
+
+function renderBlogCard(post) {
+  const desc = truncate(stripHtml(post.description), 160) || 'Read the full post on Medium.';
+  const date = post.pubDate ? new Date(post.pubDate.replace(' ', 'T')).toLocaleDateString('en-IN', { year: 'numeric', month: 'short', day: 'numeric' }) : '';
+
+  return `
+    <li class="project-item show">
+      <a class="project-card blog-card" href="${post.link}" target="_blank" rel="noopener">
+        <div class="card-head">
+          <i class='bx bxl-medium'></i>
+          <span class="repo-name">${escapeHtml(post.title)}</span>
+          <span class="lang-tag lang-other">Medium</span>
+        </div>
+        <p class="project-desc">${escapeHtml(desc)}</p>
+        <div class="card-foot"><i class='bx bx-calendar'></i> ${escapeHtml(date)} &nbsp;&middot;&nbsp; <i class='bx bx-link-external'></i> read on Medium</div>
+      </a>
+    </li>`;
+}
+
+async function loadBlogPosts() {
+  const list = document.querySelector('[data-blog-list]');
+  if (!list) return;
+
+  const cacheKey = `medium_posts_${MEDIUM_USER}`;
+  const cached = sessionStorage.getItem(cacheKey);
+  if (cached) {
+    const { data, ts } = JSON.parse(cached);
+    if (Date.now() - ts < MEDIUM_CACHE_TTL) {
+      list.innerHTML = data.map(renderBlogCard).join('');
+      return;
+    }
+  }
+
+  try {
+    const feedUrl = encodeURIComponent(`https://medium.com/feed/${MEDIUM_USER}`);
+    const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${feedUrl}`);
+    if (!res.ok) throw new Error(`Medium feed error (${res.status})`);
+
+    const data = await res.json();
+    if (data.status !== 'ok' || !data.items?.length) throw new Error('no posts found');
+
+    const posts = data.items.map(item => ({
+      title: item.title,
+      link: item.link,
+      description: item.description,
+      pubDate: item.pubDate,
+    }));
+
+    sessionStorage.setItem(cacheKey, JSON.stringify({ data: posts, ts: Date.now() }));
+    list.innerHTML = posts.map(renderBlogCard).join('');
+  } catch (err) {
+    if (cached) {
+      list.innerHTML = JSON.parse(cached).data.map(renderBlogCard).join('');
+      return;
+    }
+    list.innerHTML = `<li class="projects-error"><i class='bx bx-error-circle'></i> Couldn't load live posts (${escapeHtml(err.message)}). <a href="https://medium.com/${MEDIUM_USER}" target="_blank">View on Medium &rarr;</a></li>`;
+  }
+}
+
+loadBlogPosts();

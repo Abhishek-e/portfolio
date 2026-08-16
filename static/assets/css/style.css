@@ -519,6 +519,8 @@ article header { margin-bottom: 20px; }
 .terminal-loading { color: var(--text-secondary) !important; }
 .terminal-error { color: var(--accent-red) !important; }
 
+.blog-card { display: block; text-decoration: none; }
+
 .more-projects { text-align: center; margin-top: 26px; }
 .more-projects a { font-family: var(--ff-mono); font-size: 0.85rem; color: var(--accent-green-bright); display: inline-flex; align-items: center; gap: 6px; }
 .more-projects a:hover { text-decoration: underline; }
