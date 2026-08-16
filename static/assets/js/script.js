@@ -1,5 +1,21 @@
 'use strict';
 
+// theme toggle (light / dark)
+const themeToggleBtn = document.querySelector('[data-theme-toggle]');
+
+if (themeToggleBtn) {
+  themeToggleBtn.addEventListener('click', function () {
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
+    }
+  });
+}
+
 // sidebar toggle (mobile)
 const sidebar = document.querySelector('[data-sidebar]');
 const sidebarBtn = document.querySelector('[data-sidebar-btn]');

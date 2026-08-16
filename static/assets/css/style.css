@@ -33,6 +33,27 @@
   --transition: 0.25s ease;
 }
 
+/* light theme — chrome-style light UI, terminal windows stay dark on purpose */
+[data-theme="light"] {
+  --bg-dark: #ffffff;
+  --bg-surface: #f6f8fa;
+  --bg-surface-alt: #eaeef2;
+  --border-color: #d0d7de;
+  --border-muted: #d8dee4;
+
+  --text-primary: #1f2328;
+  --text-secondary: #57606a;
+  --text-muted: #6e7781;
+
+  --accent-green: #1a7f37;
+  --accent-green-bright: #2da44e;
+  --accent-blue: #0969da;
+  --accent-orange: #bc4c00;
+  --accent-purple: #8250df;
+  --accent-red: #cf222e;
+  --accent-yellow: #9a6700;
+}
+
 /*-----------------------------------*\
   #RESET
 \*-----------------------------------*/
@@ -215,6 +236,24 @@ main {
   background: rgba(63,185,80,0.06);
 }
 .navbar-link.active .branch-icon { color: var(--accent-green); }
+
+.theme-toggle-item { margin-left: auto; display: flex; align-items: center; padding: 0 10px; }
+.theme-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: var(--text-secondary);
+  border: 1px solid transparent;
+  transition: var(--transition);
+  font-size: 17px;
+}
+.theme-toggle-btn:hover { color: var(--accent-green-bright); border-color: var(--border-color); }
+.theme-toggle-btn .bx-sun { display: none; }
+[data-theme="light"] .theme-toggle-btn .bx-moon { display: none; }
+[data-theme="light"] .theme-toggle-btn .bx-sun { display: block; }
 
 /*-----------------------------------*\
   #ARTICLE / PAGES
