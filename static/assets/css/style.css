@@ -431,6 +431,57 @@ article header { margin-bottom: 20px; }
 .terminal-body .output a { color: var(--accent-green-bright); }
 .terminal-body .output { color: var(--text-primary); padding-left: 6px; }
 
+/* medium embed window (styled like a browser frame, since Medium blocks real iframes) */
+.embed-window {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.embed-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: var(--bg-surface-alt);
+  border-bottom: 1px solid var(--border-color);
+}
+.embed-header .dot { width: 11px; height: 11px; border-radius: 50%; }
+.embed-url {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--ff-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-muted);
+  border-radius: 20px;
+  padding: 4px 12px;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.embed-url .bx-lock-alt { color: var(--accent-green); font-size: 13px; flex-shrink: 0; }
+.embed-open-btn {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+.embed-open-btn:hover { color: var(--accent-green-bright); background: var(--bg-surface); }
+.embed-body { padding: 16px; }
+.embed-body .blog-list { margin: 0; }
+
 /* services */
 .service-title { margin-bottom: 16px; }
 .service-list {
