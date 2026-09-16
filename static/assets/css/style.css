@@ -4,10 +4,10 @@
 :root {
   --bg-darkest: #010409;
   --bg-dark: #0d1117;
-  --bg-surface: #161b22;
-  --bg-surface-alt: #1c2128;
-  --border-color: #30363d;
-  --border-muted: #21262d;
+  --bg-surface: #242f40;
+  --bg-surface-alt: #2c3849;
+  --border-color: #667080;
+  --border-muted: #333f52;
 
   --text-primary: #c9d1d9;
   --text-secondary: #8b949e;
@@ -497,9 +497,10 @@ article header { margin-bottom: 20px; }
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
   padding: 18px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.35);
   transition: var(--transition);
 }
-.service-item:hover { border-color: var(--accent-green); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+.service-item:hover { border-color: var(--accent-green); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.4); }
 .service-item .card-head i { color: var(--accent-green-bright); font-size: 20px; }
 .service-item .project-desc { margin-bottom: 0; min-height: 0; }
 
@@ -534,7 +535,7 @@ article header { margin-bottom: 20px; }
 .skills-group-title { margin: 26px 0 12px; font-size: 0.95rem; color: var(--accent-green-bright); }
 .skills-group-title:first-of-type { margin-top: 0; }
 
-.content-card { background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 18px; }
+.content-card { background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 18px; box-shadow: 0 1px 4px rgba(0,0,0,0.35); }
 
 .skills-item:not(:last-child) { margin-bottom: 18px; }
 .skills-item .title-wrapper { display: flex; justify-content: space-between; margin-bottom: 8px; font-family: var(--ff-mono); font-size: 0.85rem; }
@@ -576,9 +577,10 @@ article header { margin-bottom: 20px; }
   border-radius: var(--radius);
   padding: 18px;
   height: 100%;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.35);
   transition: var(--transition);
 }
-.project-card:hover { border-color: var(--accent-green); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+.project-card:hover { border-color: var(--accent-green); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.4); }
 
 .card-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
 .card-head > i { color: var(--text-muted); font-size: 16px; }
