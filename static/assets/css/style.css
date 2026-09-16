@@ -4,10 +4,10 @@
 :root {
   --bg-darkest: #010409;
   --bg-dark: #0d1117;
-  --bg-surface: #242f40;
-  --bg-surface-alt: #2c3849;
-  --border-color: #667080;
-  --border-muted: #333f52;
+  --bg-surface: #28334a;
+  --bg-surface-alt: #303e58;
+  --border-color: #7a8aa0;
+  --border-muted: #3a4a63;
 
   --text-primary: #c9d1d9;
   --text-secondary: #8b949e;
@@ -494,7 +494,7 @@ article header { margin-bottom: 20px; }
 }
 .service-item {
   background: var(--bg-surface);
-  border: 1px solid var(--border-color);
+  border: 1.5px solid var(--border-color);
   border-radius: var(--radius);
   padding: 18px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.35);
@@ -535,7 +535,7 @@ article header { margin-bottom: 20px; }
 .skills-group-title { margin: 26px 0 12px; font-size: 0.95rem; color: var(--accent-green-bright); }
 .skills-group-title:first-of-type { margin-top: 0; }
 
-.content-card { background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 18px; box-shadow: 0 1px 4px rgba(0,0,0,0.35); }
+.content-card { background: var(--bg-surface); border: 1.5px solid var(--border-color); border-radius: var(--radius); padding: 18px; box-shadow: 0 1px 4px rgba(0,0,0,0.35); }
 
 .skills-item:not(:last-child) { margin-bottom: 18px; }
 .skills-item .title-wrapper { display: flex; justify-content: space-between; margin-bottom: 8px; font-family: var(--ff-mono); font-size: 0.85rem; }
@@ -572,8 +572,10 @@ article header { margin-bottom: 20px; }
 .project-item.show { display: block; animation: fadeIn 0.3s ease; }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
   background: var(--bg-surface);
-  border: 1px solid var(--border-color);
+  border: 1.5px solid var(--border-color);
   border-radius: var(--radius);
   padding: 18px;
   height: 100%;
